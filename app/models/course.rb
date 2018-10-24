@@ -1,3 +1,3 @@
 class Course < ApplicationRecord
-	t.string :name
+	has_many :lessons
 end

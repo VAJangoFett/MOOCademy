@@ -5,4 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
 
+5.times do
+  course = Course.create!(title: Faker::Hobbit.character, description: Faker::Hobbit.quote)
+end
+
+15.times do
+  lesson = Lesson.create!(title: Faker::Food.dish, body: Faker::Food.description, course_id: rand(1..5))
+end
